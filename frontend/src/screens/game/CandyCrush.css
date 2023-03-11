@@ -1,0 +1,157 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: content-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo:wght@900&display=swap');
+@font-face {
+  font-family: 'Rocher';
+  src: url(https://assets.codepen.io/9632/RocherColorGX.woff2);
+}
+
+.candy-crush-home-container {
+  position: absolute;
+  z-index: 0;
+  height: 100vh;
+  width: 100%;
+  background-image: url('../../assets/candy-crush.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.score-container {
+  font-family: 'Rocher';
+  margin-right: 1rem;
+  padding-top: 3rem;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.timer {
+  height: 3rem;
+  width: 20%;
+}
+
+@font-palette-values --Purples {
+  font-family: Rocher;
+  base-palette: 6;
+}
+
+.purples {
+  font-palette: --Purples;
+}
+
+.candy-crush-container {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.candy-board-container {
+  width: 24.7rem;
+  height: 24.7rem;
+  margin-top: 1%;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(189, 189, 239);
+}
+
+.candy-box {
+  width: 3rem;
+  height: 3rem;
+  box-shadow: rgba(182, 182, 216, 0.25) 0px 30px 60px -12px inset,
+    rgba(94, 94, 94, 0.3) 0px 18px 36px -18px inset;
+  border: 1px solid rgb(95, 95, 131);
+}
+
+.candy-box.blank {
+  opacity: 0.1;
+}
+
+.candy-box > img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.game-over-box-container {
+  position: absolute;
+  display: none;
+  z-index: 1;
+  height: 100vh;
+  width: 100%;
+  background-color: #000000;
+  opacity: 0.5;
+}
+
+.game-over-box {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  margin-top: 9%;
+  margin-left: 34%;
+  height: 25rem;
+  border: 5px dashed #e608cc;
+  width: 25rem;
+  background-color: #efb0e8;
+}
+
+.active-game-over-box {
+  display: block;
+}
+
+.start-button {
+  font-family: 'Mr Dafoe';
+  margin-top: 1%;
+  padding: 0.3% 2%;
+  font-size: 1.5rem;
+  color: white;
+  background-color: #ff00e1;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
+    rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+    rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+  text-shadow: 0 0 0.05em #fff, 0 0 0.2em #90007f, 0 0 0.3em #90007f;
+}
+
+.close-container {
+  display: none;
+  height: 2rem;
+  width: 2rem;
+  position: absolute;
+  z-index: 2;
+  margin: 2% 5% 2% 95%;
+  cursor: pointer;
+}
+
+.close-container > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.active-close-container {
+  display: block;
+}
+
+.trophy-image-container {
+  height: 10rem;
+  width: 10rem;
+  margin: 2% auto;
+}
+
+.trophy-image-container > img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}

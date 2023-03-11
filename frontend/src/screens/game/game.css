@@ -1,0 +1,88 @@
+.games {
+  height: 90vh;
+  width: 100wh;
+  overflow: scroll;
+}
+
+.game-cards {
+  padding: 2rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.game-card {
+  height: 38vh;
+  border-radius: 1rem;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+  display: flex;
+}
+
+.game-card p {
+  line-height: 100%;
+  margin: 1%;
+}
+
+.game-card:hover {
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.gc-left,
+.gc-right {
+  height: 100%;
+  width: 50%;
+}
+
+.gc-left > img {
+  min-height: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  border-bottom-left-radius: 1rem;
+  border-top-left-radius: 1rem;
+}
+
+.gc-right {
+  padding: 1rem;
+}
+
+.gc-right h1 {
+  color: #ff4b2b;
+}
+
+.gc-right > .gc-gamecount {
+  margin-top: 1rem;
+}
+
+@media screen and (min-width: 350px) and (max-width: 1050px) {
+  .game-cards {
+    padding: 2rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (min-width: 350px) and (max-width: 600px) {
+  .game-cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .game-card {
+    height: 80vh;
+    display: block;
+  }
+  .gc-left {
+    width: 100%;
+    height: 50%;
+  }
+  .gc-left > img {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+  }
+}

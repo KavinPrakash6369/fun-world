@@ -1,0 +1,289 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: black;
+  transition: all 400ms ease;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 16px;
+  --board-width: 25rem;
+  --cell-size: calc(var(--board-width) / 9 - 0px);
+  overflow: hidden;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input:invalid {
+  color: red;
+}
+
+input:disabled {
+  color: black;
+  cursor: default;
+}
+
+input:disabled:hover {
+  color: black;
+  cursor: default;
+  background-color: white;
+}
+
+.game-board {
+  width: var(--board-width);
+}
+
+.board-row {
+  display: block;
+}
+
+.square {
+  float: left;
+  font-family: Comic Sans MS;
+  width: var(--cell-size);
+  height: var(--cell-size);
+  /* line-height: var(--cell-size); */
+  font-size: 2rem;
+  text-align: center;
+  margin: -1px;
+  color: black;
+  /* background-color: white; */
+  border: 1px solid black;
+}
+
+.board-row.odd input.square {
+  border: 1px solid white;
+  color: white;
+}
+
+.square:hover {
+  cursor: pointer;
+  /* background-color: #dbdbdb; */
+}
+
+.block {
+  float: left;
+  margin: -2px;
+  border: 2px solid white;
+}
+
+.block.even input {
+  background-color: white;
+}
+
+.block.odd input {
+  background-color: black;
+}
+
+.initial {
+  font-family: Times;
+}
+
+.board-row.odd input.square.conflict {
+  color: red;
+}
+
+.board-row.even input.square.conflict {
+  color: red;
+}
+
+.conflict {
+  color: #f43a3a;
+  background-color: pink;
+}
+
+.conflict:not(.initial) {
+  background-color: #ffa5a5;
+}
+
+.game {
+  background-image: url('./assets/background.png');
+  background-size: cover;
+}
+
+.game-board {
+  position: relative;
+  margin: 0rem 6rem;
+  margin-top: 1.7rem;
+}
+
+.game-menu {
+  position: absolute;
+  right: -10rem;
+  width: 10rem;
+  text-align: center;
+  padding: 5px;
+}
+
+Button {
+  background-color: black;
+  color: white;
+}
+
+.validation.btn {
+  width: 45%;
+  padding: 0.6rem 0rem;
+  margin-top: 2rem;
+  border-radius: 10px 10px 0px 10px;
+  border: 3px solid white;
+  font-weight: 600;
+  background-color: green;
+}
+
+.status {
+  width: 55%;
+  height: 6vh;
+  text-align: center;
+  position: absolute;
+  /* bottom: 2rem;
+    left: 10rem; */
+  font-size: 1rem;
+  padding-top: 1%;
+  color: white;
+  margin-left: 25rem;
+  margin-top: -90%;
+  border-radius: 25px 25px 0px 25px;
+}
+
+.instructions {
+  margin-top: 1rem;
+}
+
+.title {
+  text-align: center;
+}
+
+.github-link {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.headerTitle {
+  text-align: center;
+  font-weight: 600;
+  padding-top: 2rem;
+}
+
+.timer1,
+.score {
+  font-size: 1.8rem;
+  font-family: Apple Chancery;
+}
+
+.sudoku {
+  color: red;
+  font-size: 3rem;
+  padding-top: -2rem;
+  font-family: Disko;
+  text-transform: uppercase;
+}
+
+.score-parent {
+  color: white;
+}
+
+.timer1 {
+  position: relative;
+  font-size: 2rem;
+  font-weight: 700;
+  bottom: 36rem;
+}
+
+.start-game {
+  color: white;
+}
+
+.timings {
+  color: white;
+}
+
+.reset.btn {
+  margin-left: 12rem;
+  margin-top: -10rem;
+  background-color: red;
+}
+
+@media screen and (max-width: 1060px) {
+  .game {
+    background-image: none;
+    background-color: black;
+  }
+  .game-board {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem auto;
+  }
+  .status {
+    margin-left: 0rem;
+    margin-top: -2%;
+  }
+  .timer {
+    left: -8rem;
+    bottom: 35rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .game-board {
+    margin: 0rem auto;
+  }
+  .timer {
+    bottom: 34.5rem;
+    left: -3rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .game {
+    background-color: white;
+  }
+  .score-parent {
+    color: black;
+  }
+  .headerTitle {
+    margin-left: 0rem;
+  }
+  .game-board {
+    margin: 0rem 5rem;
+  }
+  .timer {
+    bottom: 34.5rem;
+    left: -3rem;
+  }
+  .board-parent {
+    margin-top: 11rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .headerTitle {
+    margin-left: 15rem;
+  }
+  .game-board {
+    margin: 0rem 9rem;
+  }
+  .timer {
+    bottom: 34.5rem;
+    left: -3rem;
+  }
+}

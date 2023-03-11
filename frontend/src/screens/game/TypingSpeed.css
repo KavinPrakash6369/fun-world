@@ -1,0 +1,207 @@
+.Typing-speed {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+  background-color: #010100;
+  padding: 2% 0%;
+  min-height: 100vh;
+  align-items: center;
+  padding-top: 5rem;
+  background-image: url(https://media.istockphoto.com/id/1061119902/photo/game-background.jpg?s=612x612&w=0&k=20&c=C8YsjCm6Y7n1CsUSOU-G75cNDMHzEM4EORdP6nPkXJY=);
+}
+
+.Typing-speed .title {
+  font-size: 3rem;
+  color: #fff;
+}
+
+.Typing-speed .sub-title {
+  color: #fff;
+  font-size: 1rem;
+  letter-spacing: 0.75rem;
+}
+
+.Typing-speed .wrap {
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Typing-speed .wrap .Circular-Progress {
+  margin-left: 2rem;
+  width: 7rem;
+  height: 7rem;
+  color: #fff;
+  background-color: #f1e78c;
+  border-radius: 50%;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Typing-speed .input-text {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  height: 100%;
+  text-align: center;
+  color: #fff;
+  box-shadow: #9f9e9e5b 0px 6px 24px 0px, #9f9e9e5b 0px 0px 0px 1px;
+  flex-direction: row;
+  overflow-x: hidden;
+}
+
+.Typing-speed .input-text .typed {
+  color: #fff;
+  /* display: none; */
+  height: 100%;
+  width: 50%;
+  font-size: 4rem;
+  text-align: right;
+  direction: rtl;
+  overflow: hidden;
+  text-overflow: clip;
+  white-space: nowrap;
+  font-weight: 500;
+  padding-right: 1rem;
+}
+
+.Typing-speed .input-text .sentance {
+  width: 50%;
+  font-size: 4rem;
+  color: antiquewhite;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  height: 100%;
+}
+
+.Typing-speed .input-text > input {
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  font-size: 4rem;
+  overflow: hidden;
+  align-items: center;
+  text-align: center;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+  background: transparent;
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+  background: transparent;
+}
+
+.Typing-speed .start {
+  padding: 1rem;
+  background-color: #f1e78c;
+  border-radius: 15%;
+  cursor: pointer;
+}
+
+.Typing-speed .keyboard {
+  width: 80%;
+  padding: 5% 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.Typing-speed .keyboard .row {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+  color: #000;
+  list-style: none;
+  width: 100%;
+}
+
+.Typing-speed .keyboard .row > li {
+  padding: 1rem 1.25rem;
+  border-radius: 15%;
+}
+
+.pinky {
+  background-color: #dc143c;
+}
+
+.ring {
+  background-color: #fe7e50;
+}
+
+.middle {
+  background-color: #ff8d01;
+}
+
+.pointer1st {
+  background-color: #fed701;
+}
+
+.pointer2nd {
+  background-color: #f1e78c;
+}
+
+#shift {
+  padding: 1rem 2rem;
+}
+
+.Typing-speed .pressed {
+  border: 1px solid #fff;
+  background-color: #000;
+  color: #fff;
+  transition-duration: 0s;
+}
+
+.result {
+  height: 30rem;
+  width: 35rem;
+  position: absolute;
+  top: 20%;
+  left: 28%;
+  background-color: #fff;
+  border-radius: 4%;
+  display: none;
+}
+
+.result .res_img {
+  padding: 0.5rem;
+  padding-top: 1rem;
+  border-radius: 17%;
+  height: 50%;
+  width: 50%;
+  object-fit: contain;
+}
+
+.result > p {
+  padding: 0.51rem;
+  letter-spacing: 0.55rem;
+  font-weight: 500;
+  font-size: 1rem;
+}

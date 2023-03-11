@@ -1,0 +1,21 @@
+{
+  "name": "fun-world",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "cd frontend && npm install && npm run build",
+    "start": "cd backend && npm install && node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kishore-2572/Fun-world.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kishore-2572/Fun-world/issues"
+  },
+  "homepage": "https://github.com/Kishore-2572/Fun-world#readme"
+}

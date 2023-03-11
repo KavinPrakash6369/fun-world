@@ -1,0 +1,38 @@
+.leaderboard{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    overflow-y: scroll;
+    flex-direction: column;
+}
+
+.leaderboard-header{
+    margin: 1rem auto;
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.lbh-item{
+    height: auto;
+    padding: 1rem 1rem;
+    margin: auto 1rem;
+    cursor: pointer;
+}
+
+.leaderboard-table{
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    /* background-color: black; */
+}
+
+.lb-table{
+    width: 95%;
+    margin: 1rem auto;
+}
+
+.lb-table th, .lb-table td{
+    text-align: start;
+}
