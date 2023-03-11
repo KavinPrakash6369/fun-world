@@ -11,7 +11,9 @@ dotenv.config();
 const app = express();
 
 mongo
-  .connect(process.env.MONGO_URL)
+  .connect(
+    'mongodb+srv://Fun_World:funworld123@cluster0.d6c0bqj.mongodb.net/Funworld?retryWrites=true&w=majority'
+  )
   .then(() => {
     app.listen(5000, () => console.log(`Funworld listening on port 5000!`));
   })

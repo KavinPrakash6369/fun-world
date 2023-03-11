@@ -10,7 +10,7 @@ const generateToken = (user) => {
       isAdmin: user.isAdmin,
       designation: user.designation,
     },
-    process.env.JWT_SECRET,
+    'something secret',
     {
       expiresIn: '30d',
     }
@@ -21,7 +21,7 @@ const isAuth = (req, res, next) => {
   const authorization = req.headers.authorization;
   if (authorization) {
     const token = authorization.slice(7, authorization.length);
-    jwt.verify(token, process.env.JWT_SECRET, (err, decode) => {
+    jwt.verify(token, 'something secret', (err, decode) => {
       if (err) {
         res.status(404).send({ message: 'Invalid Token' });
       } else {
