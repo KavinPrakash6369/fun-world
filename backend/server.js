@@ -15,6 +15,7 @@ mongo
     'mongodb+srv://Fun_World:funworld123@cluster0.d6c0bqj.mongodb.net/Funworld?retryWrites=true&w=majority'
   )
   .then(() => {
+    console.log('Connected to DB');
     app.listen(5000, () => console.log(`Funworld listening on port 5000!`));
   })
   .catch((e) => console.log(e));
