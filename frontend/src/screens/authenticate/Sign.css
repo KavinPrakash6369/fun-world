@@ -15,13 +15,13 @@
   background-size: cover;
 }
 
-h1 {
+.Sign h1 {
   font-weight: bold;
   margin: 0;
   color: beige;
 }
 
-p {
+.Sign p {
   font-size: 14px;
   font-weight: bold;
   line-height: 20px;
@@ -29,19 +29,19 @@ p {
   margin: 20px 0 30px;
 }
 
-span {
+.Sign span {
   font-size: 12px;
   color: beige;
 }
 
-a {
+.Sign a {
   color: #fff;
   font-size: 14px;
   text-decoration: none;
   margin: 15px 0;
 }
 
-.container {
+.Sign .container {
   border-radius: 10px;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   position: absolute;
@@ -52,7 +52,7 @@ a {
   opacity: 0.8;
 }
 
-.form-container form {
+.Sign .form-container form {
   background: rgba(45, 52, 54, 1);
   display: flex;
   flex-direction: column;
@@ -63,11 +63,11 @@ a {
   text-align: center;
 }
 
-.social-container {
+.Sign .social-container {
   margin: 20px 0;
 }
 
-.social-container a {
+.Sign .social-container a {
   border: 1px solid #ddd;
   border-radius: 50%;
   display: inline-flex;
@@ -78,7 +78,7 @@ a {
   width: 40px;
 }
 
-.form-container input {
+.Sign .form-container input {
   background: #eee;
   border: none;
   padding: 12px 15px;
@@ -86,7 +86,7 @@ a {
   width: 100%;
 }
 
-button {
+.Sign button {
   border-radius: 20px;
   border: 1px solid #ff4b2b;
   background: #ff4b2b;
@@ -99,7 +99,7 @@ button {
   transition: transform 80ms ease-in;
 }
 
-input[type='text'] {
+.Sign input[type='text'] {
   width: 240px;
   text-align: center;
   background: transparent;
@@ -115,7 +115,7 @@ input[type='text'] {
   font-weight: bold;
 }
 
-input[type='password'] {
+.Sign input[type='password'] {
   width: 240px;
   text-align: center;
   background: transparent;
@@ -130,7 +130,7 @@ input[type='password'] {
   color: #fff;
 }
 
-input[type='email'] {
+.Sign input[type='email'] {
   width: 240px;
   text-align: center;
   background: transparent;
@@ -146,41 +146,41 @@ input[type='email'] {
   font-weight: bold;
 }
 
-button:active {
+.Sign button:active {
   transform: scale(0.95);
 }
 
-button:focus {
+.Sign button:focus {
   outline: none;
 }
 
-button.ghost {
+.Sign button.ghost {
   background: transparent;
   border-color: #ff4b2b;
   background-color: #ff4b2b;
 }
 
-.form-container {
+.Sign .form-container {
   position: absolute;
   top: 0;
   height: 100%;
   transition: all 0.6s ease-in-out;
 }
 
-.sign-in-container {
+.Sign .sign-in-container {
   left: 0;
   width: 50%;
   z-index: 2;
 }
 
-.sign-up-container {
+.Sign .sign-up-container {
   left: 0;
   width: 50%;
   z-index: 1;
   opacity: 0;
 }
 
-.overlay-container {
+.Sign .overlay-container {
   position: absolute;
   top: 0;
   left: 50%;
@@ -191,7 +191,7 @@ button.ghost {
   z-index: 100;
 }
 
-.overlay {
+.Sign .overlay {
   background: #fff;
   /* background: linear-gradient(to right, #ff4b2b, #ff416c) no repeat 0 0 / cover; */
   color: #000;
@@ -203,7 +203,7 @@ button.ghost {
   transition: transform 0.6s ease-in-out;
 }
 
-.overlay-panel {
+.Sign .overlay-panel {
   position: absolute;
   top: 0;
   display: flex;
@@ -218,20 +218,20 @@ button.ghost {
   transition: transform 0.6s ease-in-out;
 }
 
-.overlay-right {
+.Sign .overlay-right {
   right: 0;
   transform: translateX(0);
 }
 
-.overlay-right > h1 {
+.Sign .overlay-right > h1 {
   color: #000;
 }
 
-.overlay-left {
+.Sign .overlay-left {
   transform: translateX(-20%);
 }
 
-.overlay-left > h1 {
+.Sign .overlay-left > h1 {
   color: #000;
 }
 
@@ -239,19 +239,19 @@ button.ghost {
 
 /*....Move signin to the right....*/
 
-.container.right-panel-active .sign-in-container {
+.Sign .container.right-panel-active .sign-in-container {
   transform: translateX(100%);
 }
 
 /*....Move overlay to the left....*/
 
-.container.right-panel-active .overlay-container {
+.Sign .container.right-panel-active .overlay-container {
   transform: translateX(-100%);
 }
 
 /*....Bring sign up over sign in....*/
 
-.container.right-panel-active .sign-up-container {
+.Sign .container.right-panel-active .sign-up-container {
   transform: translateX(100%);
   opacity: 1;
   z-index: 5;
@@ -259,14 +259,14 @@ button.ghost {
 
 /*...Move overlay back to right....*/
 
-.container.right-panel-active .overlay {
+.Sign .container.right-panel-active .overlay {
   transform: translateX(50%);
 }
 
-.container.right-panel-active .overlay-left {
+.Sign .container.right-panel-active .overlay-left {
   transform: translateX(0);
 }
 
-.container.right-panel-active .overlay-right {
+.Sign .container.right-panel-active .overlay-right {
   transform: translateX(20%);
 }

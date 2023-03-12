@@ -9,6 +9,7 @@ export default class Sudoku extends React.Component {
     super(props);
     this.state = {
       initial: 33,
+      time: 0,
     };
   }
 

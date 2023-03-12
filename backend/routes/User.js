@@ -53,9 +53,15 @@ userRouter.post('/signin', async (req, res) => {
 
 userRouter.get('/', async (req, res) => {
   try {
-    const typegameDetail = await Typing.find();
-    const candycrushgameDetail = await Candycrush.find();
-    const sudokugameDetail = await Sudoku.find();
+    const typegameDetail = await Typing.find().sort({
+      totalscore: -1,
+    });
+    const candycrushgameDetail = await Candycrush.find().sort({
+      totalscore: -1,
+    });
+    const sudokugameDetail = await Sudoku.find().sort({
+      totalscore: -1,
+    });
     res.status(200).send({
       typing: typegameDetail,
       candycrush: candycrushgameDetail,
